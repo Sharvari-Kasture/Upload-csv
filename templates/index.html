@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSV Upload and Mapping</title>
+        <link rel="stylesheet" href="{{ url_for('static', path='/css/style.css') }}">
+    </head>
+    <h1>CSV Upload and Mapping</h1>
+    <form action="/uploadfile/" method="post" enctype="multipart/form-data">
+        <label for="name_col">ID Column:</label>
+        <input type="number" id="id_col" name="id_col" value="0" min="0">
+        <label for="name_col">Name Column:</label>
+        <input type="text" id="name_col" name="name_col" value="1" min="0">
+        <label for="age_col">Age Column:</label>
+        <input type="number" id="age_col" name="age_col" value="2" min="0">
+        <input type="file" name="file"><br>
+
+        <input type="submit" value="Upload">
+    </form>
+</body>
+</html>
